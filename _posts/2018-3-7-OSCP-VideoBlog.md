@@ -1,6 +1,5 @@
 ---
 layout: single
-markup: "justify align"
 title: "OSCP Video Blog" 
 related: true
 comments: true
