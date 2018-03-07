@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+<generator uri="http://jekyllrb.com" version="3.7.3">Jekyll</generator>
+<link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" />
+<link href="http://localhost:4000/" rel="alternate" type="text/html" />
+<updated>2018-03-07T10:49:19-04:00</updated>
+<id>http://localhost:4000/</id>
+<title>Julio Ureña</title>
+<subtitle>Temas de Seguridad Informatica Ofensiva</subtitle>
+<author>
+<name>Julio Ureña</name>
+<email>juliourena@plaintext.do</email>
+<uri>https://www.hackthebox.eu/profile/6695</uri>
+</author>
+<entry>
+<title>Seguridad en Windows</title>
+<link href="http://localhost:4000/WindowsSecurity/" rel="alternate" type="text/html" title="Seguridad en Windows" />
+<published>2018-03-07T00:00:00-04:00</published>
+<updated>2018-03-07T00:00:00-04:00</updated>
+<id>http://localhost:4000/WindowsSecurity</id>
+<content type="html" xml:base="http://localhost:4000/WindowsSecurity/">&lt;p&gt;Este será un lugar para discutir temas de seguridad relacionados a Windows tales como:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Phishing&lt;/li&gt;
+  &lt;li&gt;Evasión de Antivirus&lt;/li&gt;
+  &lt;li&gt;Problemas de configuraciones&lt;/li&gt;
+  &lt;li&gt;Seguridad en Active Directory&lt;/li&gt;
+  &lt;li&gt;Entre otras cosas.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+<summary>Este será un lugar para discutir temas de seguridad relacionados a Windows tales como:  Phishing  Evasión de Antivirus  Problemas de configuraciones  Seguridad en Active Directory  Entre otras cosas.</summary>
+</entry>
+<entry>
+<title>OSCP Video Blog</title>
+<link href="http://localhost:4000/OSCP-VideoBlog/" rel="alternate" type="text/html" title="OSCP Video Blog" />
+<published>2018-03-07T00:00:00-04:00</published>
+<updated>2018-03-07T00:00:00-04:00</updated>
+<id>http://localhost:4000/OSCP-VideoBlog</id>
+<content type="html" xml:base="http://localhost:4000/OSCP-VideoBlog/">&lt;p&gt;En mayo 2017 inicie el estudio de Ethical Hacking en un Centro de Capacitación en mi país &lt;a href=&quot;http://certyacademy.com&quot;&gt;CertyAcademy&lt;/a&gt;, una vez finalice el curso, empecé a investigar de esta certificación y en el camino me encontré con OSCP. Muchos comentarios indicaban que OSCP era mucho más difícil ya que se trataba de una prueba 100% técnica y aunque sería todo un reto para mí, que para ese entonces solo tenía 1 mes sabiendo que era metasploit, de todas formas, asumí el reto y empecé la preparación.&lt;/p&gt;
+
+&lt;p&gt;Compartí mis experiencias durante la preparación a la certificación de OSCP en una serie de videos que espero disfruten.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=sQng-HsTqR8&amp;amp;list=PLXm1FM6zsxpAlD2JqaXd3v70StrTYGSQq&quot;&gt;OSCP Playlist&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;{% include video id=”sQng-HsTqR8” provider=”youtube” %}&lt;/p&gt;
+
+</content>
+<summary>En mayo 2017 inicie el estudio de Ethical Hacking en un Centro de Capacitación en mi país CertyAcademy, una vez finalice el curso, empecé a investigar de esta certificación y en el camino me encontré con OSCP. Muchos comentarios indicaban que OSCP era mucho más difícil ya que se trataba de una prueba 100% técnica y aunque sería todo un reto para mí, que para ese entonces solo tenía 1 mes sabiendo que era metasploit, de todas formas, asumí el reto y empecé la preparación.</summary>
+</entry>
+<entry>
+<title>Hackthebox</title>
+<link href="http://localhost:4000/HackTheBox/" rel="alternate" type="text/html" title="Hackthebox" />
+<published>2018-03-07T00:00:00-04:00</published>
+<updated>2018-03-07T00:00:00-04:00</updated>
+<id>http://localhost:4000/HackTheBox</id>
+<content type="html" xml:base="http://localhost:4000/HackTheBox/">&lt;p&gt;&lt;a href=&quot;https://www.hackthebox.eu&quot;&gt;HackTheBox&lt;/a&gt; es una plataforma estilo CTF (Capture The Flag) extraordinaria, aquí di mis primeros pasos y empecé a desarrollar habilidades que fueron imprescindibles para la certificación &lt;a href=&quot;/OSCP-VideoBlog&quot;&gt;OSCP&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Es un excelente lugar para relacionarse con profesionales de la comunidad de InfoSec con su &lt;a href=&quot;https://netsecfocus.herokuapp.com/&quot;&gt;Canal de Slack&lt;/a&gt; y en donde podrán aprender muchísimo siguiendo videos como los que les traigo y los de &lt;a href=&quot;https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA&quot;&gt;ippsec&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Esta sesión está dedicada a la resolución de las maquinas retiradas de HackTheBox, y el paso a paso de cómo lo logre. 
+&lt;a href=&quot;https://www.youtube.com/watch?v=wNdFMUpc-kM&amp;amp;list=PLXm1FM6zsxpAHycJ8-0pvEsJPYmddzQBJ&quot;&gt;HackTheBox PlayList&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Video Tutoriales de Maquinas Resueltas:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=2YvbkINbI9I&quot;&gt;Mirai&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=j4TVd4AS99k&quot;&gt;Blocky&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=6gRiTmGHWgk&quot;&gt;Legacy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=W7sweezNNFE&quot;&gt;Devel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=OugYDlAB83I&quot;&gt;Popcorn&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=5gKvhgTWxjU&quot;&gt;Lame&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=wNdFMUpc-kM&quot;&gt;Introduccion a HackTheBox&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+<summary>HackTheBox es una plataforma estilo CTF (Capture The Flag) extraordinaria, aquí di mis primeros pasos y empecé a desarrollar habilidades que fueron imprescindibles para la certificación OSCP.</summary>
+</entry>
+<entry>
+<title>Defensa</title>
+<link href="http://localhost:4000/Defensa/" rel="alternate" type="text/html" title="Defensa" />
+<published>2018-03-07T00:00:00-04:00</published>
+<updated>2018-03-07T00:00:00-04:00</updated>
+<id>http://localhost:4000/Defensa</id>
+<content type="html" xml:base="http://localhost:4000/Defensa/">&lt;p&gt;En esta parte preparare guías de defensa en contra de algunos ataques. Utilizaremos y discutiremos configuraciones de:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Firewalls&lt;/li&gt;
+  &lt;li&gt;Logging&lt;/li&gt;
+  &lt;li&gt;Asignación de Privilegios.&lt;/li&gt;
+  &lt;li&gt;Sandboxing.&lt;/li&gt;
+  &lt;li&gt;Entre otras cosas.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+<summary>En esta parte preparare guías de defensa en contra de algunos ataques. Utilizaremos y discutiremos configuraciones de:  Firewalls  Logging  Asignación de Privilegios.  Sandboxing.  Entre otras cosas.</summary>
+</entry>
+</feed>
