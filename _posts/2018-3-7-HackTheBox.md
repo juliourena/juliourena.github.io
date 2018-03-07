@@ -9,6 +9,7 @@ Esta sesión está dedicada a la resolución de las maquinas retiradas de HackTh
 [HackTheBox PlayList]( https://www.youtube.com/watch?v=wNdFMUpc-kM&list=PLXm1FM6zsxpAHycJ8-0pvEsJPYmddzQBJ)
 
 Video Tutoriales de Maquinas Resueltas:
+* [Shocker](https://youtu.be/rA2B4bRjhzI)
 * [Mirai](https://www.youtube.com/watch?v=2YvbkINbI9I)
 * [Blocky](https://www.youtube.com/watch?v=j4TVd4AS99k)
 * [Legacy](https://www.youtube.com/watch?v=6gRiTmGHWgk)
