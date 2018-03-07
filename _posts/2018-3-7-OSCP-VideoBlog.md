@@ -1,8 +1,5 @@
 ---
-layout: single
 title: "OSCP Video Blog" 
-related: true
-comments: true
 ---
 En mayo 2017 inicie el estudio de Ethical Hacking en un Centro de Capacitación en mi país [CertyAcademy](http://certyacademy.com), una vez finalice el curso, empecé a investigar de esta certificación y en el camino me encontré con OSCP. Muchos comentarios indicaban que OSCP era mucho más difícil ya que se trataba de una prueba 100% técnica y aunque sería todo un reto para mí, que para ese entonces solo tenía 1 mes sabiendo que era metasploit, de todas formas, asumí el reto y empecé la preparación.
 
