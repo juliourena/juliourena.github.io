@@ -1,5 +1,7 @@
 ---
 title: “OSCP Posts”
+layout: single
+permalink: /oscp/
 --- 
 
 Posts:
