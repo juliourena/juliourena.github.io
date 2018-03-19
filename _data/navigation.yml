@@ -8,7 +8,7 @@ main:
     url: /HackTheBox
   - title: "OSCP"
     description: "Mi Historia desde el dia 0 a OSCP"
-    url: /OSCP-VideoBlog
+    url: /oscp/ #/OSCP-VideoBlog
   - title: "Defensa"
     url: /Defensa
     description: "Aprende como defenderte en contra de ciertos ataques"
