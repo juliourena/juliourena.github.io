@@ -9,6 +9,7 @@ Esta sesión está dedicada a la resolución de las maquinas retiradas de HackTh
 [HackTheBox PlayList]( https://www.youtube.com/watch?v=wNdFMUpc-kM&list=PLXm1FM6zsxpAHycJ8-0pvEsJPYmddzQBJ)
 
 Video Tutoriales de Maquinas Resueltas:
+* [FluxCapacitor](https://youtu.be/KKFRJe9PyCE)
 * [Tally](https://www.youtube.com/edit?o=U&video_id=XKtW8JBmh9Y)
 * [Ariekei](https://www.youtube.com/edit?o=U&video_id=mWfitZWGadA)
 * [Sense](https://youtu.be/smYiXy3DlRk)
