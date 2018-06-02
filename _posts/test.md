@@ -6,4 +6,4 @@ title: "Test Post"
 
 **bold**
 
-![test]( assets/images/c-sharp-categorychecker.png)
+![test](assets/images/JEUMpp.jpg)
