@@ -9,7 +9,7 @@ En un futuro post planeo hablar un poco de como identificar phishing en las pág
  
 Entendiendo que este programa no busca "Eliminar el Phishing de WhatsApp" lo considero una prueba de concepto, que permitirá a otros a crear herramientas útiles para automatizar ciertas cosas en WhatsApp, como hacer una tarea que cada 5 minutos te mande un Email a todas tus cuentas si tienes un mensaje de tu esposa que no has contestado 😊
 
-A continuación, presentaré la forma en que desarrollé el programa y como ustedes pueden utilizarlo. Para la verificación de las categorías utilicé el servicio público de Fortinet (marca que conozco y utilizo) pueden visitar [FortiGuard WebFilter](www.fortiguard.com/webfilter) para probarlo. Agradecimientos a Fortinet por mantener este servicio público. Es importante señalar que, aunque utilizo la web de Fortinet, este desarrollo no está ligado a la compañía, pudieran utilizar cualquier recurso público para esa verificación. 
+A continuación, presentaré la forma en que desarrollé el programa y como ustedes pueden utilizarlo. Para la verificación de las categorías utilicé el servicio público de Fortinet (marca que conozco y utilizo) pueden visitar [FortiGuard WebFilter](https://www.fortiguard.com/webfilter) para probarlo. Agradecimientos a Fortinet por mantener este servicio público. Es importante señalar que, aunque utilizo la web de Fortinet, este desarrollo no está ligado a la compañía, pudieran utilizar cualquier recurso público para esa verificación. 
 
 # Lenguaje de Programación. 
 
