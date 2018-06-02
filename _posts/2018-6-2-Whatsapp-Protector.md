@@ -202,7 +202,7 @@ Y así se vería en el Whatsapp 😊
 
 Pueden encontrar el proyecto aquí:
 
-https://github.com/juliourena/WhatsApp-Protector
+(https://github.com/juliourena/WhatsApp-Protector)
 
 Espero que les sea útil, cualquier duda o sugerencia no duden en escribir.
  
