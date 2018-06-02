@@ -62,7 +62,7 @@ namespace Whatsapp_Fortinet
 
 En mi búsqueda no encontré una librería de C# que me permitiera conectarme a WhatsApp, lo que si encontré fue una en Python, no quería mezclar ambos lenguajes o hacer algún tipo de integración, por eso no pensé en completar el código en C#. Para mi suerte, Python y C# son los lenguajes que hablo. Así que sin más pensarlo decidí implementarlo en Python.
  
-La librería que encontré fue esta: link:https://github.com/mukulhase/WebWhatsapp-Wrapper es un proyecto de [Mukul Hase](https://github.com/mukulhase) les invito a ver su trabajo.
+La librería que encontré fue esta: link: https://github.com/mukulhase/WebWhatsapp-Wrapper es un proyecto de [Mukul Hase](https://github.com/mukulhase) les invito a ver su trabajo.
  
 Leí el [README](https://github.com/mukulhase/WebWhatsapp-Wrapper/blob/master/README.md), pero algunas cosas no me quedaron muy claras y soy de las personas que le gusta usar **print('variable')** para ver si funciona o no, jeje, así que tenía que probar. 
  
@@ -116,7 +116,7 @@ Solo les dejaré eso para que lo tengan como referencia, pueden seguir investiga
  
 # Verificación de Categorías en URL
  
-Si visitan la página de FortiGuard podrán ver la opción de consulta de WebFiltering link:https://fortiguard.com/webfilter si probamos por ejemplo: link:http://plaintext.do nos indica que nuestra página está categorizada como Information Technology :)
+Si visitan la página de FortiGuard podrán ver la opción de consulta de WebFiltering link: https://fortiguard.com/webfilter si probamos por ejemplo: link: http://plaintext.do nos indica que nuestra página está categorizada como Information Technology :)
  
 ![fortiguard](/assets/images/fortigard-webfilter.jpg)
  
@@ -202,7 +202,7 @@ Y así se vería en el Whatsapp 😊
 
 Pueden encontrar el proyecto aquí:
 
-link:https://github.com/juliourena/WhatsApp-Protector
+link:  https://github.com/juliourena/WhatsApp-Protector
 
 Espero que les sea útil, cualquier duda o sugerencia no duden en escribir.
  
