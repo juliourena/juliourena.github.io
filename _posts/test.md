@@ -6,4 +6,4 @@ title: "Test Post"
 
 **bold**
 
-![test](assets/images/JEUMpp.jpg)
+![test](/assets/images/JEUMpp.jpg)
