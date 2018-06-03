@@ -18,7 +18,7 @@ Al principio tenía la intención de hacerlo en C#, incluso complete la parte de
 ![csharp](/assets/images/c-sharp-categorychecker.png)
 
 Aquí el código:
-```
+```console
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -70,7 +70,7 @@ Leí el [README](https://github.com/mukulhase/WebWhatsapp-Wrapper/blob/master/RE
  
 Utilicé Ubuntu x64 para esto, pero podrían usar cualquier distribución, los ejemplos y comandos están pensados para la última actualización de Ubuntu. Procedí a instalar python3 y webwhatsapi, si no los tienen pueden instalarlo utilizando los siguientes comandos:
 
-``` 
+```console
 sudo apt install python3
 sudo apt install python3-pip
 pip3 install webwhatsapi
@@ -78,7 +78,7 @@ pip3 install webwhatsapi
 
 Necesitamos también descargar el [Gecko Driver](https://github.com/mozilla/geckodriver) que permite interactuar con los navegadores, con la ayuda de este driver es que podremos trabajar con web.whatsapp.com y ubicarlo en algún directorio del $PATH. Para descargar [aquí](https://github.com/mozilla/geckodriver/releases)
  
-```
+```console
 wget https://github.com/mozilla/geckodriver/releases/download/v0.20.1/geckodriver-v0.20.1-linux64.tar.gz
 tar -xvzf geckodriver-v0.20.1-linux64.tar.gz
 chmod +x geckodriver
@@ -91,18 +91,21 @@ Ya con esto podemos empezar nuestro código. El código está dividido en dos pa
  
 Necesitamos importar las librerías de WhatsAPIDriver, entramos a la consola de python3 y ponemos lo siguiente:
  
-```
+```console
 from webwhatsapi import WhatsAPIDriver
 from webwhatsapi.objects.message import Message
  ```
 
 Ahora procedemos a crear una instancia de la clase WhatsAPIDriver que nos permitirá interactuar con nuestro WhatsApp web:
-`driver = WhatsAPIDriver(client='firefox',loadstyles=True,profile='/home/plaintext/dev/profile-whatsapp')`
 
-**Notas Importantes: **
-*Pueden utilizar otros navegadores como Chrome, pero Firefox es el default. 
-*Loadstyles les permitirá ver el contenido de la página con sus estilos, tarde mucho en encontrar esto porque la página de web.whatsapp.com sin esto se mostraba incompleta. 
-*Profile nos permitirá guardar la sesión de web.whatsapp.com de modo que no tengamos que leer el QR cada vez que lancemos la aplicación.
+```console
+driver = WhatsAPIDriver(client='firefox',loadstyles=True,profile='/home/plaintext/dev/profile-whatsapp')
+```
+
+**Notas Importantes:**
+* Pueden utilizar otros navegadores como Chrome, pero Firefox es el default. 
+* Loadstyles les permitirá ver el contenido de la página con sus estilos, tarde mucho en encontrar esto porque la página de web.whatsapp.com sin esto se mostraba incompleta. 
+* Profile nos permitirá guardar la sesión de web.whatsapp.com de modo que no tengamos que leer el QR cada vez que lancemos la aplicación.
  
 Ahora podemos ver nuestro estado:
  
@@ -122,7 +125,7 @@ Si visitan la página de FortiGuard podrán ver la opción de consulta de WebFil
  
 Ahora lo que necesitamos replicar esta misma consulta en Python e imprimir la categoría. Utilizaremos la librería *requests*, una forma sencilla sería:
  
-```
+```console
 import requests, re
 url = 'http://plaintext.do'
 r = requests.get('https://fortiguard.com/webfilter?q=' + url)
@@ -154,27 +157,25 @@ WhatsApp Protector, creo que me excedí con el nombre, pero los proyectos de des
  
 # Configuración de sesión permanente: 
 
-Abrir la consola de python3 y poner lo siguiente:
+**1ro - Abrir la consola de python3 y poner lo siguiente:**
  
-```
-import time
+```console
 from webwhatsapi import WhatsAPIDriver
 from webwhatsapi.objects.message import Message
 driver = WhatsAPIDriver(client='Firefox',loadstyles=True)
 ```
 
-Escanear el código QR y cerrar la consola utilizando CTRL + C.
+**2do - Escanear el código QR y cerrar la consola utilizando CTRL + C.**
  
-Crear un perfil de Firefox, en la consola (bash) poner lo siguiente:
- 
-`firefox -p`
- 
-*Crear Perfil
-*Seleccionar un nombre
-*Elegir el directorio (Crear un directorio donde se vayan a guardar los registros de Firefox)
-*Entrar a https://web.whatsapp.com y escanear el código QR
-*Entrar nuevamente a https://web.whatsapp.com y validar si la sesión persiste.
-*Finalizar.
+**3ro - Crear un perfil de Firefox.
+
+* En la consola (bash) poner lo siguiente: `firefox -p`
+* Crear Perfil
+* Seleccionar un nombre
+* Elegir el directorio (Crear un directorio donde se vayan a guardar los registros de Firefox)
+* Entrar a [https://web.whatsapp.com](https://web.whatsapp.com) y escanear el código QR
+* Entrar nuevamente a [https://web.whatsapp.com](https://web.whatsapp.com) y validar si la sesión persiste.
+* Finalizar.
  
 Ahora solo resta utilizar el programa:
  
@@ -192,7 +193,7 @@ Y ya tenemos el chat_id de dos conversaciones que tienen el nombre **vitilla**
 
 Para ejecutar la protección solo sería, recuerden que la -t es opcional 😊
 
-`python3 whatsapp-protector.py -d /home/plaintext/dev/plaintext-profile -c 18000070508-1500082004@g.us` -t 120
+`python3 whatsapp-protector.py -d /home/plaintext/dev/plaintext-profile -c 18000070508-1500082004@g.us -t 120`
 
 ![whatsapp-protector-busqueda](/assets/images/ws-protector.png)
 
@@ -206,4 +207,4 @@ Pueden encontrar el proyecto aquí:
 
 Espero que les sea útil, cualquier duda o sugerencia no duden en escribir.
  
-Dios les bendiga! 
+Dios les bendiga!
