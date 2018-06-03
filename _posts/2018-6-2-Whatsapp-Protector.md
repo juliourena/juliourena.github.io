@@ -167,7 +167,7 @@ driver = WhatsAPIDriver(client='Firefox',loadstyles=True)
 
 **2do - Escanear el código QR y cerrar la consola utilizando CTRL + C.**
  
-**3ro - Crear un perfil de Firefox.
+**3ro - Crear un perfil de Firefox.**
 
 * En la consola (bash) poner lo siguiente: `firefox -p`
 * Crear Perfil
@@ -183,7 +183,9 @@ Ahora solo resta utilizar el programa:
 
 Para buscar el chat_id utilizamos:
 
-`python3 whatsapp-protector.py -d /home/plaintext/dev/plaintext-profile -b vitilla`
+```terminal
+python3 whatsapp-protector.py -d /home/plaintext/dev/plaintext-profile -b vitilla
+```
 
 ![whatsapp-protector-busqueda](/assets/images/ws-busqueda.png)
 
@@ -193,7 +195,9 @@ Y ya tenemos el chat_id de dos conversaciones que tienen el nombre **vitilla**
 
 Para ejecutar la protección solo sería, recuerden que la -t es opcional 😊
 
-`python3 whatsapp-protector.py -d /home/plaintext/dev/plaintext-profile -c 18000070508-1500082004@g.us -t 120`
+```terminal
+python3 whatsapp-protector.py -d /home/plaintext/dev/plaintext-profile -c 18000070508-1500082004@g.us -t 120
+```
 
 ![whatsapp-protector-busqueda](/assets/images/ws-protector.png)
 
@@ -206,5 +210,7 @@ Pueden encontrar el proyecto aquí:
 [WhatsApp-Protector](https://github.com/juliourena/WhatsApp-Protector)
 
 Espero que les sea útil, cualquier duda o sugerencia no duden en escribir.
- 
-Dios les bendiga!
+
+**Dios les bendiga!**
+
+**El servir a Cristo, no es una tarea, sino una relación. Amigos de Dios. Jn 15:15** 
