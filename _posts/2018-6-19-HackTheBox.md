@@ -9,7 +9,7 @@ Esta sesión está dedicada a la resolución de las maquinas retiradas de HackTh
 [HackTheBox PlayList]( https://www.youtube.com/watch?v=wNdFMUpc-kM&list=PLXm1FM6zsxpAHycJ8-0pvEsJPYmddzQBJ)
 
 Video Tutoriales de Maquinas Resueltas:
-* [Chatterbox](https://youtu.be/3KWlOqSREic)
+* [Chatterbox](https://youtu.be/3KWlOqSREic) 
 * [Jeeves](https://www.youtube.com/watch?v=MvzZ9_ncDI0)
 * [FluxCapacitor](https://youtu.be/KKFRJe9PyCE)
 * [Tally](https://www.youtube.com/edit?o=U&video_id=XKtW8JBmh9Y)
