@@ -11,7 +11,7 @@ Cuando hablamos de Hacking y Bypass de Firewalls difícilmente nos referiremos a
  
 Para entender cómo hacerle Bypass al Firewall hagamos un poco de teoría y discutamos sobre **Bind TCP** y **Reverse TCP**, estos son dos de las formas que utilizamos para establecer la comunicación entre el equipo afectado y la máquina del atacante, no obstante, no son las únicas formas de hacerlo. 
  
-Al utilizar **Bind TCP** el atacante se conecta al equipo de la víctima. El malware está diseñado para abrir un puerto en la máquina afectada, y este puerto es utilizado por el atacante para comunicarse con ese equipo.
+Al utilizar **Bind TCP** el atacante se conecta al equipo de la víctima. El malware está diseñado para abrir un puerto en la máquina afectada, y este puerto es utilizado por el atacante para comunicarse con ese equipo. Los Firewalls/NGFW bloquearán estos ataques, porque el puerto es abierto en el equipo afectado no en el Firewall.
  
 ![Bind_TCP](/assets/images/bind_tcp.png)
  
@@ -31,19 +31,19 @@ Sin las funcionalidades de IPS/IDS lamentablemente estamos expuestos a cualquier
  
 # Recomendación #2 - Bloquear todo, permitir solo lo necesario.
  
-Este tiende a ser una de las medidas de seguridad más comunes, pero no se sorprendan que muchas organizaciones tienden a simplificarse la vida utilizando el “Allow ALL" o en ocasiones sucede que, al momento de un problema de comunicación, para resolver rápido y “arreglar después" utilizan el Allow "ALL" y el después, lamentablemente, nunca llega. Esta brecha podría ser utilizada por los atacantes para comprometer la organización. Veamos un ejemplo de porque esto es un problema:
+Este tiende a ser una de las medidas de seguridad más comunes, pero no se sorprendan que muchas organizaciones tienden a simplificarse la vida utilizando el **Allow ALL** o en ocasiones sucede que, al momento de un problema de comunicación, para resolver rápido y **"arreglar después"** utilizan el **Allow ALL** y el después, lamentablemente, nunca llega. Esta brecha podría ser utilizada por los atacantes para comprometer la organización. Veamos un ejemplo de porque esto es un problema:
  
-Tenemos el protocolo SMB o TCP 445, es un protocolo utilizado comúnmente para comunicaciones internas y no recomendado para conexiones públicas, ya que se pueden utilizar muchos para robo de credenciales o bypass de antivirus. 
+Tenemos el protocolo **SMB** o **TCP 445**, es un protocolo utilizado comúnmente para comunicaciones internas y no recomendado para conexiones públicas, ya que se pueden utilizar muchos para robo de credenciales o bypass de antivirus. 
  
 Supongamos que el usuario X recibe un pdf por correo.
 
 ![phishing](/assets/images/email_phishing.png)
  
-Al usuario abrir el pdf este enviará el hash en forma de NTLMv2. Este hash puede ser crackeado y obtener el password del usuario, de modo que este puerto es recomendable que esté bloqueado.
+Al usuario abrir el pdf este enviará el hash en forma de **NTLMv2**. Este hash puede ser crackeado y obtener el password del usuario, de modo que este puerto es recomendable que esté bloqueado.
 
 ![NTLMv2-hash](/assets/images/NTLMv2-hash.png)
 
-Para la creación del PDF utilicé [bad-pdf](https://github.com/deepzec/Bad-Pdf), quien recibe la respuesta es la aplicación [Responder](https://github.com/SpiderLabs/Responder) y el password puede ser crackeado utilizando John The Ripper (Instalado en Kali por defecto).
+Para la creación del PDF utilicé [bad-pdf](https://github.com/deepzec/Bad-Pdf), para recibir el hash la aplicación [Responder](https://github.com/SpiderLabs/Responder) y el password puede ser crackeado utilizando John The Ripper (Instalado en Kali por defecto). 
  
 # Recomendación #3 - Bloquear sitios desconocidos. 
  
@@ -51,7 +51,7 @@ Algunas soluciones de NGFW permiten hacer filtrado web, y siempre encontraremos 
  
 Regularmente nos encontraremos que un atacante querrá hacer ingeniería social a la empresa, si el atacante no cuenta con un sitio web categorizado, tendrá que comprar un sitio nuevo sin categorización para crear su campaña de phishing, si nos mantenemos bloqueando los sitios desconocidos podríamos evitar estas campañas de phishing. 
  
-El concepto detrás de esto es algo parecido al proyecto de [WhatsApp-Protector](https://github.com/juliourena/WhatsApp-Protector) que realicé, para más información seguir el [enlace](https://github.com/juliourena/WhatsApp-Protector)
+El concepto detrás de esto es algo parecido al proyecto de [WhatsApp-Protector](https://github.com/juliourena/WhatsApp-Protector) que realicé, para más información seguir el enlace.
  
 # Recomendación #4 - Habilitar SSL Inspection en todos los puertos permitidos.
  
@@ -59,7 +59,7 @@ Algunos NGFW por defecto solo hacen inspección SSL a comunicaciones que utiliza
  
 Un atacante podría utilizar el link https://myhackersite.com:80 y este tráfico no sería inspeccionado por consecuencia un atacante podría hacer Bypass a cualquier IPS/IDS. Si permites otros puertos que no sean SSL aun así deberías inspeccionar esos puertos.
  
-**Nota**: Los IPS/IDS comúnmente utilizan firmas digitales para identificar patrones en el tráfico, es posible que, aunque tengan estos habilitados algún tipo de Malware desconocido pueda pasar por la red sin ser detectado por el IPS/IDS, es por esta razón que deben ser considerados otros controles como protección a los equipos, para incrementar la seguridad.
+**Nota**: Los IPS/IDS comúnmente utilizan firmas digitales para identificar patrones en el tráfico, es posible que, aunque tengan estos habilitados algún tipo de Malware desconocido pueda pasar por la red sin ser detectado por el IPS/IDS, es por esta razón que deben ser considerados otros controles como protección a los equipos, para incrementar la seguridad. **Un NGFW no lo es todo**.
  
 Espero que les sea útil, cualquier duda o sugerencia no duden en escribir.
 
