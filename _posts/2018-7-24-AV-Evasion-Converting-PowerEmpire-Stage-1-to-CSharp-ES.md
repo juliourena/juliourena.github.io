@@ -1,5 +1,6 @@
 ---
 title: Evasión de AV convirtiendo el Stage 1 de PowerEmpire a CSharp
+classes: wide
 ---
 
 English [here](/PowerEmpire-Stage1-To-Csharp-and-BypassAV-EN/)
