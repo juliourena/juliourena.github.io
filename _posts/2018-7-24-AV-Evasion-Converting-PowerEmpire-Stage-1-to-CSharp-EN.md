@@ -1,8 +1,9 @@
 ---
 title: AV Evasion Converting PowerEmpire Stage 1 to CSharp.
+classes: wide
 ---
 
-Español [aquí](/PowerEmpire-Stage1-To-Csharp-and-BypassAV-ES/)
+Español [aquí](/AV-Evasion-Converting-PowerEmpire-Stage-1-to-CSharp-ES/)
 
 How can I run PowerEmpire using a .exe instead of a PowerShell command? I asked myself this question and decided to look what the PowerShell Empire command does and replicated it in C#.
  
