@@ -460,7 +460,11 @@ A Quick video of Execution!
  
 There's a lot more to discover for PowerShell Empire, but for me this was a good start. I have been using PowerEmpire for almost 6 months and I didn't know all this stuff.
  
-The project is in my GitHub. 
+The project is in my [GitHub](https://github.com/juliourena/plaintext/blob/master/PowerEmpire/PSEmpireStage1.cs).
+
+**God bless you!**
+
+**Serving Christ is not a task, but a relationship. Friends of God. Jn 15:15**
  
  
  

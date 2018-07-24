@@ -2,6 +2,8 @@
 title: Evasión de AV convirtiendo el Stage 1 de PowerEmpire a CSharp
 ---
 
+English [here](/PowerEmpire-Stage1-To-Csharp-and-BypassAV-EN/)
+
 ¿Cómo puedo ejecutar PowerEmpire usando un .exe en lugar de un comando de PowerShell? Me hice esta pregunta y decidí ver qué hace el comando de PowerShell Empire y lo repliqué en C #.
 
 Como todos sabemos, PowerShell puede usar clases .Net, que hacen de PowerShell un lenguaje de scripts sólido. Esta es una de las razones por las que Defensores y Atacantes comenzaron a usar PowerShell. Algunas de las herramientas más populares de uso ofensivo de PowerShells son [BloodHound](https://github.com/BloodHoundAD/BloodHound), [PowerEmpire](https://github.com/EmpireProject/Empire), [PowerSploit](https://github.com/PowerShellMafia/PowerSploit), [Nishang tools](https://github.com/samratashok/nishang), por mencionar algunas.
@@ -452,8 +454,12 @@ csc.exe PSEmpireStage1.cs /reference:C:\Windows\Microsoft.NET\assembly\GAC_MSIL\
 
 ¡Un video rápido de ejecución!
 
-{% include video id="0jaC8156BEE" provider="youtube" %}
+{% include video id="la1fr4Mpj-4" provider="youtube" %}
  
 Hay mucho más por descubrir para PowerShell Empire, pero para mí fue un buen comienzo. He estado usando PowerEmpire durante casi 6 meses y no sabía todo esto.
  
-El proyecto está en mi GitHub.
+El proyecto está en mi [GitHub](https://github.com/juliourena/plaintext/blob/master/PowerEmpire/PSEmpireStage1.cs).
+
+**Dios les bendiga!**
+
+**El servir a Cristo, no es una tarea, sino una relación. Amigos de Dios. Jn 15:15** 
