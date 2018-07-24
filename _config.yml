@@ -8,6 +8,8 @@
 theme                    : "minimal-mistakes-jekyll"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
+classes: wide
+
 # Site Settings
 locale                   : "en-US"
 title                    : "PlainText - Pentesting"
