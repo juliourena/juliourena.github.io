@@ -446,11 +446,13 @@ Ahora modifique este código para incluir sus variables, necesita cambiar clave 
 
 Para compilar, puede usar csc.exe y hacer referencia a System.Management.Automation.dll. Ejemplo: guarde su código en PSEmpireStage1.cs y use el símbolo del sistema del desarrollador.
 
-``` 
+```
 csc.exe PSEmpireStage1.cs /reference:C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll
 ```
 
 ¡Un video rápido de ejecución!
+
+{% include video id="0jaC8156BEE" provider="youtube" %}
  
 Hay mucho más por descubrir para PowerShell Empire, pero para mí fue un buen comienzo. He estado usando PowerEmpire durante casi 6 meses y no sabía todo esto.
  

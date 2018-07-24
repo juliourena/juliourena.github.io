@@ -315,7 +315,7 @@ PowerShellInstance.Runspace.SessionStateProxy.SetVariable("u", ua);
 
 Finally, I added some extra functions to hide the cmd window, you will find information about then in the comments. Now let's put the C# code all together and execute our C# empire payload. The final code should look like:
 
-```
+``` 
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -455,6 +455,8 @@ csc.exe PSEmpireStage1.cs /reference:C:\Windows\Microsoft.NET\assembly\GAC_MSIL\
 ```
 
 A Quick video of Execution! 
+
+{% include video id="0jaC8156BEE" provider="youtube" %}
  
 There's a lot more to discover for PowerShell Empire, but for me this was a good start. I have been using PowerEmpire for almost 6 months and I didn't know all this stuff.
  
