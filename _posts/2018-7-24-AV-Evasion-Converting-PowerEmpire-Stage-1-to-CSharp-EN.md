@@ -115,7 +115,7 @@ $_-bXOr$S[($S[$I]+$S[$H])%256]}};
 
 Now we need to convert each part of this code into C#. I enjoyed a lot learning some .Net classes while doing this research. Let's start line by line.
  
-# From PowerShell to C#
+# From PowerShell to C#.
  
 The **System.Net.ServicePointManager.Expect100Continue** in simple words, this property if true, the client requests that use the PUT and POST methods will add an Expect header to the request. For more information check the [link](https://msdn.microsoft.com/en-us/library/system.net.servicepointmanager.expect100continue(v=vs.110).aspx)
  
@@ -446,8 +446,9 @@ namespace PSEmpire_Stage1
     }
 }
 ```
+# Ajust the Code for your Empire.
 
-Now modify this code to include your variables, you need to change Key, server, target and cookie. If you don't know what are yours, just execute launcher command, use base64 to decode your script and check those values.
+If you want to test it, you just need to modify this code to include your variables, you need to change **Key**, **server**, **target** and **cookie** variables. If you don't know what are yours, just execute launcher command (launcher powershell <Launcher Name>), use **base64 -d** to decode your script and check those values.
 
 To compile you can use csc.exe, and reference the System.Management.Automation.dll. Example: Save your code in PSEmpireStage1.cs and use the Developer Command Prompt.
 
@@ -455,7 +456,7 @@ To compile you can use csc.exe, and reference the System.Management.Automation.d
 csc.exe PSEmpireStage1.cs /reference:C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll
 ```
 
-A Quick video of Execution! 
+The easy way to get it working, is just take a look at this video :) 
 
 {% include video id="0jaC8156BEE" provider="youtube" %}
  

