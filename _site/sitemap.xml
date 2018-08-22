@@ -7,6 +7,10 @@
 <url>
 <loc>http://localhost:4000/HackTheBox/</loc>
 <lastmod>2018-03-07T00:00:00-04:00</lastmod>
+</url>.
+<url>
+<loc>http://localhost:4000/.well-known/acme-challenge/9fPn6El0ig5Bc2n_XLcA8gM-DbWFWBNgNWxuNZQDx8c</loc>
+<lastmod>2018-08-22T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/OSCP-VideoBlog/</loc>
