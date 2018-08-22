@@ -11,8 +11,6 @@ main:
     url: /oscp/ #/OSCP-VideoBlog
   - title: "Defensa"
     url: /Defensa
-  - title: "cert"
-    url: /.well-known/acme-challenge/9fPn6El0ig5Bc2n_XLcA8gM-DbWFWBNgNWxuNZQDx8c
     description: "Aprende como defenderte en contra de ciertos ataques"
   - title: "Sobre mi"
     url: /about/ #https://mmistakes.github.io/minimal-mistakes/about/
