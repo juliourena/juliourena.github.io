@@ -125,6 +125,7 @@ author:
 include:
   - .htaccess
   - _pages
+  - .well-known/acme-challenge/9fPn6El0ig5Bc2n_XLcA8gM-DbWFWBNgNWxuNZQDx8c
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
