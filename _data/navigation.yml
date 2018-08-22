@@ -14,6 +14,9 @@ main:
     description: "Aprende como defenderte en contra de ciertos ataques"
   - title: "Sobre mi"
     url: /about/ #https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "cert"
+    url: /.well-known
+   
     #  - title: "Posts"
     #url: /year-archive/
     #- title: "Collections"
