@@ -9,6 +9,7 @@ Esta sesión está dedicada a la resolución de las maquinas retiradas de HackTh
 [HackTheBox PlayList]( https://www.youtube.com/watch?v=wNdFMUpc-kM&list=PLXm1FM6zsxpAHycJ8-0pvEsJPYmddzQBJ)
 
 Video Tutoriales de Maquinas Resueltas:
+* [Celestial](https://youtu.be/6R4xX_SfSdA)
 * [Rabbit](https://youtu.be/8Kv61bs9OWs)
 * [Bart](https://youtu.be/nnqvCEUJxIc) 
 * [Chatterbox](https://youtu.be/3KWlOqSREic) 
