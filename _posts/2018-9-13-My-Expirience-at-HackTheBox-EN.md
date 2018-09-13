@@ -35,7 +35,7 @@ HackTheBox currently has 2 ProLabs: [RastaLabs](https://www.hackthebox.eu/press/
 
 # Final Thoughts
 
-I want to end this post by thanking [@ch4p](https://twitter.com/hpylarinos) for the effort and initiative to make HackTheBox, to each of its members who contribute so much to our community: [g0blin](https://twitter.com/g0blinResearch), [ippsec](https://twitter.com/ippsec), [mrb3n](https://twitter.com/mrb3n813), Axerrel, [Rasta Mouse](https://twitter.com/_RastaMouse),  [mrh4sh](https://twitter.com/mr_h4sh), [lkys37en](https://twitter.com/lkys37en), other moderators (if I miss anyone) and each one of you, for making HackTheBox so great! I have found good friends here, thank you all. You Rock!
+I want to end this post by thanking [@ch4p](https://twitter.com/hpylarinos) for the effort and initiative to make HackTheBox, to each of its members who contribute so much to our community: [g0blin](https://twitter.com/g0blinResearch), [ippsec](https://twitter.com/ippsec), [mrb3n](https://twitter.com/mrb3n813), Axerrel, [Rasta Mouse](https://twitter.com/_RastaMouse),  [mrh4sh](https://twitter.com/mr_h4sh), [lkys37en](https://twitter.com/lkys37en), other moderators (if I miss anyone) and each one of you, for making HackTheBox so great! I have found good friends here, thank you all. You Rocks!
 
 ![HackTheBox-Defcon](/assets/images/hackthebox-meeting.jpg)
 
