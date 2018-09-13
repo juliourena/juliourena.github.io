@@ -3,7 +3,7 @@ title: My Expirience at HackTheBox
 classes: wide
 ---
 
-Español [aquí](/Mi-Experiencia-en-HackTheBox-ES/)
+Español [aquí](/Mi-Experiencia-En-HackTheBox-ES/)
 
 There are things that come into your life and you do not realize how much impact they will cause, until the time passes and you look back and you understand that this *"thing"* has had so much to do with where you are now, what you know, the friends you have, the contributions you have made and how much you still need to learn. That "thing" has been *HackTheBox* for me.
 
