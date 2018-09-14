@@ -36,7 +36,7 @@ HackTheBox tiene 2 ProLabs actualmente, [RastaLabs](https://www.hackthebox.eu/pr
 
 # Pensamientos Finales
 
-Quiero finalizar este post agradeciendo a [@ch4p](https://twitter.com/hpylarinos) por el esfuerzo e iniciativa de hacer HackTheBox, a cada uno de sus miembros que aportan tanto a nuestra comunidad: [g0blin](https://twitter.com/g0blinResearch), [ippsec](https://twitter.com/ippsec), [mrb3n](https://twitter.com/mrb3n813), Axerrel, [Rasta Mouse](https://twitter.com/_RastaMouse), [mrh4sh](https://twitter.com/mr_h4sh), [lkys37en](https://twitter.com/lkys37en), demás moderadores (si se me escapó alguno) y a cada uno de ustedes, por hacer que HackTheBox, sea tan genial!. He encontrado buenos amigos aquí, también gracias a cada uno de ustedes. Son Geniales!
+Quiero finalizar este post agradeciendo a [@ch4p](https://twitter.com/hpylarinos) por el esfuerzo e iniciativa de hacer HackTheBox, a cada uno de sus miembros que aportan tanto a nuestra comunidad: [g0blin](https://twitter.com/g0blinResearch), [ippsec](https://twitter.com/ippsec), [mrb3n](https://twitter.com/mrb3n813), Arrexel, [Rasta Mouse](https://twitter.com/_RastaMouse), [mrh4sh](https://twitter.com/mr_h4sh), [lkys37en](https://twitter.com/lkys37en), demás moderadores (si se me escapó alguno) y a cada uno de ustedes, por hacer que HackTheBox, sea tan genial!. He encontrado buenos amigos aquí, también gracias a cada uno de ustedes. Son Geniales!
 
 ![HackTheBox-Defcon](/assets/images/hackthebox-meeting.jpg)
 
