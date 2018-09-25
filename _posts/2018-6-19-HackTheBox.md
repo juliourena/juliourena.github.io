@@ -1,4 +1,6 @@
 ---
+title: HackTheBox
+classes: wide
 ---
 
 [HackTheBox](https://www.hackthebox.eu) es una plataforma estilo CTF (Capture The Flag) extraordinaria, aquí di mis primeros pasos y empecé a desarrollar habilidades que fueron imprescindibles para la certificación [OSCP](/OSCP-VideoBlog). 
@@ -9,6 +11,8 @@ Esta sesión está dedicada a la resolución de las maquinas retiradas de HackTh
 [HackTheBox PlayList]( https://www.youtube.com/watch?v=wNdFMUpc-kM&list=PLXm1FM6zsxpAHycJ8-0pvEsJPYmddzQBJ)
 
 Video Tutoriales de Maquinas Resueltas:
+* [Olympus](https://youtu.be/prKsyZrygzQ)
+* [Canape](https://youtu.be/HLi-3fdG1NY)
 * [Celestial](https://youtu.be/6R4xX_SfSdA)
 * [Rabbit](https://youtu.be/8Kv61bs9OWs)
 * [Bart](https://youtu.be/nnqvCEUJxIc) 
