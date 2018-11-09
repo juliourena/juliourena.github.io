@@ -11,6 +11,11 @@ Esta sesión está dedicada a la resolución de las maquinas retiradas de HackTh
 [HackTheBox PlayList]( https://www.youtube.com/watch?v=wNdFMUpc-kM&list=PLXm1FM6zsxpAHycJ8-0pvEsJPYmddzQBJ)
 
 Video Tutoriales de Maquinas Resueltas:
+* [DropZone](https://www.youtube.com/watch?v=0MjtpBtfes0)
+* [Bounty](https://www.youtube.com/watch?v=V5DO0UlBLHQ)
+* [HTB 101](https://www.youtube.com/watch?v=t7P9zo3xorE)
+* [Fighter](https://www.youtube.com/watch?v=h1dnYkmj-yA)
+* [Sunday](https://www.youtube.com/watch?v=2Uho6Md3wcw)
 * [Olympus](https://youtu.be/prKsyZrygzQ)
 * [Canape](https://youtu.be/HLi-3fdG1NY)
 * [Celestial](https://youtu.be/6R4xX_SfSdA)
