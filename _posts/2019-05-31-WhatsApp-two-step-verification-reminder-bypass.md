@@ -1,9 +1,9 @@
 ---
-title: WhatsApp two-step verification remainder bypass.
+title: WhatsApp two-step verification reminder bypass.
 classes: wide
 ---
 
-In February 2019 I contacted Facebook team regarding a bug I found in WhatsApp two-step verification remainder feature, a feature intended to help users remember its PIN. 
+In February 2019 I contacted Facebook team regarding a bug I found in WhatsApp two-step verification reminder feature, a feature intended to help users remember its PIN. 
 
 {% include video id="KnD_BiSrTcU" provider="youtube" %}
 
@@ -35,11 +35,11 @@ The bug affects iOS and the latest WhatsApp, I tested it on iPhone 8 plus & iPho
  
 If you find a bug in one of the Facebook app you can report it using this link: [https://www.facebook.com/whitehat/](https://www.facebook.com/whitehat/)
  
-Since this bug is in the remainder function and it does not affect the registration process or in any way your privacy. It was not considered as a Security. Here their response regarding my report: 
+Since this bug is in the reminder function and it does not affect the registration process or in any way your privacy. It was not considered as a Security. Here their response regarding my report: 
 
 ![fb-response](/assets/images/fb-response.png)
 
-I agreed with the Facebook team, since this two-steps verification it's not a two-factor authentication but a remainder to help the user remember it's PIN. 
+I agreed with the Facebook team, since this two-steps verification it's not a two-factor authentication but a reminder to help the user remember it's PIN. 
  
 While I agree with Facebook team, I would like to ask you, what are your thoughts about their answer? Do you think it's a security vulnerability? or do you also agree with them? 
  
