@@ -2,7 +2,7 @@
 main:
   - title: "Patreon"
     description: "Aportes "
-    url: /Patreon
+    url: /Patreon/
   - title: "Seguridad Windows"
     description: "Ataques a Sistemas operativos Windows"
     url: /WindowsSecurity
