@@ -1,6 +1,7 @@
 ---
 title: "Sobre mi"
 layout: single
+classes: wide
 permalink: /about/
 ---
 
