@@ -1,5 +1,8 @@
 # main links links
 main:
+  - title: "Patreon"
+    description: "Aportes "
+    url: /Patreon
   - title: "Seguridad Windows"
     description: "Ataques a Sistemas operativos Windows"
     url: /WindowsSecurity
