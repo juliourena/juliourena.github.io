@@ -12,7 +12,7 @@ El 10 de octubre de 2020, comencé el reto publicando mi primer [tweet](https://
 
 En mi [GitHub](https://github.com/juliourena/100DaysOfBlueTeam) compartí diferentes casos de uso de las cosas que aprendí en esta jornada, para que lo puedan utilizar como referencia, y la verdad al final me di cuenta que dediqué mucho más tiempo entendiendo cómo colectar la información, qué herramientas puedo utilizar para diferentes necesidades y automatizar todos los procesos, que analizando la información en sí. 
 
-Como parte de estas tareas aprendí a automatizar mis laboratorios, diferentes herramientas para la colección de información y muchas herramientas OpenSource, que en mi opinión son geniales y realmente útiles para aprender a identificar amenazas.
+Como parte de estas tareas aprendí a automatizar mis laboratorios, diferentes herramientas para la colección de información y muchas herramientas OpenSource, que son geniales y realmente útiles para aprender a identificar amenazas.
 
 Sé que este conocimiento me permitirá mejorar de forma general mis perspectivas en relación a los temas de Ciberseguridad, conocimiento que espero poder aplicar y compartir en lo adelante. 
 
