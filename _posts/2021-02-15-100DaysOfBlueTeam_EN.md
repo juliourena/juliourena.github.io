@@ -2,7 +2,7 @@
 title: 100 Days Of BlueTeam
 classes: wide
 ---
-Español [aquí](/2021-02-15-100DaysOfBlueTeam_ES/)
+Español [aquí](/100DaysOfBlueTeam_ES/)
 
 2020 came with many surprises for everyone, COVID, social distancing, remote work and PlainText decided to take a break from their RedTeam learning journey to learn a few things about BlueTeam.
 
