@@ -24,7 +24,7 @@ I start searching "how to execute Python with python.dll" and some links from do
 
 The [documentation](https://docs.python.org/3/faq/windows.html) said: "Run-time linking greatly simplifies link options; everything happens at run time. Your code must load pythonNN.dll using the Windows **LoadLibraryEx()** routine. The code must also use access routines and data in pythonNN.dll (that is, Python’s C API’s) using pointers obtained by the Windows **GetProcAddress()** routine. Macros can make using these pointers transparent to any C code that calls routines in Python’s C API"
  
-Ok, I can load Dropbox pythonNN.dll with **LoadLibrary()** on my own process and use **GetProcAddress()** to access its methods, interesting. Now how can I execute code using python? This is where the 2nd link comes into play [Embedding Python in Another Application](https://docs.python.org/3/extending/embedding.html)
+Ok, I can load Dropbox pythonNN.dll with **LoadLibrary()** on my own process and use **GetProcAddress()** to access its methods, interesting. Now how can I execute code using python? This is where the 2nd link come into play [Embedding Python in Another Application](https://docs.python.org/3/extending/embedding.html)
  
 With the example provided [1.1. Very High Level Embedding](https://docs.python.org/3/extending/embedding.html#very-high-level-embedding) I know I can use **PyRun_SimpleString()** function to run Python commands like: 
 
