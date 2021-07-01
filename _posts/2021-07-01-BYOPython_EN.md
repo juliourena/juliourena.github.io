@@ -250,6 +250,8 @@ On my [GitHub](https://github.com/juliourena) you will find the source code to a
 
 If you want a live video me explaining how I discover it and reproducing it, take a look at [HackTheBox - RedTeamRD Meetup - Spectra & Abuso de Dropbox python.dll](https://www.youtube.com/watch?v=oXb3hRZrKrA&t=4265s) (Spanish).
 
+**Note**: I reported this to Dropbox but it was out of scope: "Attacks requiring physical access to a user's device."
+
 **God bless you!**
 
 **Serving Christ is not a task, but a relationship. God's Friends Jn 15: 15**
