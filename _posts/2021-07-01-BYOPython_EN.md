@@ -78,7 +78,7 @@ Basically we need to call **Py_Initialize()** function before using **PyRun_Simp
 
 3 - **[DInvoke](https://github.com/TheWover/DInvoke)** – Now that we have the address location of those functions, we need a way to invoke those functions. With **DInvoke** we can dynamically invoke unmanaged API without PInvoke (the method we used for **LoadLibrary()** and **GetProcAddress()**). The use case for DInvoke is that the Python DLL location may change based on the Dropbox version.
 
-To use this API we need to (1) define the function we want to use, (2) get the memory address location of those functions (we did it with GetProcAddress()), and (3) initialize/invoke those functions. 
+To use DInvoke we need to (1) define the function we want to use, (2) get the memory address location of those functions (we did it with GetProcAddress()), and (3) initialize/invoke those functions. 
 
 ```
 // (1) - Define the functions
