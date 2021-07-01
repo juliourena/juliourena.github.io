@@ -2,7 +2,7 @@
 title: My process to discover how to use Dropbox "pythonNN.dll" to execute Python scripts without Python.
 classes: wide
 ---
-### Introduction
+## Introduction
 I was playing Warzone and start noticing some packet loss, which is "no bueno" if you are playing an FPS game. I went into the task manager and look for those processes that were using network and start killing everything, like Rambo. On Dropbox.exe I clicked "Open File Location" and once the folder opened, I notice some Python related files. 
 
 ![image](https://user-images.githubusercontent.com/29603107/124169512-50b47f80-da74-11eb-8e82-467e94be1e59.png)
@@ -30,7 +30,7 @@ With the example provided [1.1. Very High Level Embedding](https://docs.python.o
 
 `PyRun_SimpleString("print('Hello from python')").` 
 
-### Building the program
+## Building the program
 With the information I got I was ready to build a C# program which:  
 1.	**LoadLibrary()** – to import pythonNN.dll from Dropbox into my program.  
 2.	**GetProcAddress()** – to retreive **PyRun_SimpleString()**, **Py_Initialize()** and **Py_Finalize()** functions address.  
@@ -232,7 +232,7 @@ I know, I know, you want to see a shell pop up and. There you have!
 
 {% include video id="lZAZBkmIpY4" provider="youtube" %}
 
-### Bring you own Python. 
+## Bring you own Python. 
 
 After playing a little bit with this code, I ended up realizing that I can use any program that does the same as Dropbox, you can go into your **Program Files/Program Files (x86)** directories and search for "python*.dll". I found another software on my computer that also brings it's python38.dll 😊
 
