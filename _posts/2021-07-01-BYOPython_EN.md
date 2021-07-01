@@ -234,7 +234,7 @@ I know, I know, you want to see a shell pop up and. There you have!
 
 ### Bring you own Python. 
 
-After playing a little bit with this code, I ended up realizing that I can use any program that does the same as Dropbox, you can go into your **Program Files/Program Files (x86)** directories and search for "python*.dll" I found another software on my computer that also brings python38.dll 😊
+After playing a little bit with this code, I ended up realizing that I can use any program that does the same as Dropbox, you can go into your **Program Files/Program Files (x86)** directories and search for "python*.dll". I found another software on my computer that also brings it's python38.dll 😊
 
 ![image](https://user-images.githubusercontent.com/29603107/124184872-2f5d8e80-da88-11eb-8d9b-548ac2617a9e.png)
 
@@ -244,7 +244,7 @@ In the following example I’m downloading Python 3.8 from python.org and execut
 
 {% include video id="rHkBq-ru-yw" provider="youtube" %}
 
-On my [GitHub](https://github.com/juliourena) you will find the source code to abuse Dropbox pythonNN.dll and a reference on how to **B**ring **Y**our **O**wn **P**ython keep in mind you may need to change the path of your Dropbox instalation to make it work.
+On my [GitHub](https://github.com/juliourena) you will find the source code to abuse Dropbox pythonNN.dll and a reference on how to **B**ring **Y**our **O**wn **P**ython, keep in mind you may need to change the path of your Dropbox instalation to make it work.
 
 [BYOPython Github repository](https://github.com/juliourena/BYOPython)
 
