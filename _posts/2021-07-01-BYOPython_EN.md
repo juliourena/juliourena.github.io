@@ -191,19 +191,19 @@ While using the original python38.dll, [Process Monitor](https://docs.microsoft.
 
 I was wondering, what's the purpose of this .zip file? While looking around I found this information on [Python documentation website](https://www.python.org/dev/peps/pep-0273/): "Currently, sys.path is a list of directory names as strings. If this PEP is implemented, an item of sys.path can be a string naming a zip file archive. The zip archive can contain a subdirectory structure to support package imports. The zip archive satisfies imports exactly as a subdirectory would" 
 
+So, for our purpose Python uses this zip to load modules, including the module "encodings", the one we got an error before. In the following image you can partially see the content of python38.zip.
+
 ![image](https://user-images.githubusercontent.com/29603107/124184430-8c0c7980-da87-11eb-85b1-e8c1bcf16e34.png)
 
-So, for our purpose Python uses this zip to load modules, including the "encodings", the one we got an error before.
-
-Python38.zip doesn’t exist on Dropbox’s directory, but there’s a python-packages.zip which is the same, with a different name, as you can see in the following image.  
+Python38.zip doesn’t exist on Dropbox’s directory, but there’s a **python-packages.zip** which is the same, with a different name, as you can see in the following image.  
 
 ![image](https://user-images.githubusercontent.com/29603107/124184476-9d558600-da87-11eb-9c45-eb04f570bc1d.png)
 
 To use that package with our Dropbox python38.dll, I set the program's environment variables the same as the python38.dll Path and include python-packages.zip as PATH too. 
 
 ```
-Environment.SetEnviromentVariable(“PYTHONHOME”, pythonPath);
-Environment.SetEnviromentVariable(“PYTHONPATH”, $@”{pythonPath}\python-packages.zip);
+Environment.SetEnviromentVariable("PYTHONHOME", pythonPath);
+Environment.SetEnviromentVariable("PYTHONPATH", $@"{pythonPath}\python-packages.zip");
 ```
 
 After crossing my fingers and pray to God, it worked!!! But while yelling Alleluia!! I got another error **ModuleNotFoundError: No module named "site"**!! Oh my God!!!!! ☹
