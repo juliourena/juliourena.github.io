@@ -1,9 +1,9 @@
 ---
-title: My process to discover how to use Dropbox "pythonNN.dll" to execute Python scripts without Python.
+title: My process to discover how to use Dropbox pythonNN.dll to execute Python scripts without Python.
 classes: wide
 ---
 ## Introduction
-I was playing Warzone and start noticing some packet loss, which is "no bueno" if you are playing an FPS game. I went into the task manager and look for those processes that were using network and start killing everything, like Rambo. On Dropbox.exe I clicked "Open File Location" and once the folder opened, I notice some Python related files. 
+I was playing Warzone and start noticing some packet loss, which is "no bueno" if you are playing an FPS game. I went into the task manager and look for those processes that were using the network and start killing everything, like Rambo. On Dropbox.exe I clicked "Open File Location" and once the folder opened, I notice some Python related files. 
 
 ![image](https://user-images.githubusercontent.com/29603107/124169512-50b47f80-da74-11eb-8e82-467e94be1e59.png)
 
@@ -11,7 +11,7 @@ After I finish playing, I went back to the folder and notice a file that caught 
 
 ![image](https://user-images.githubusercontent.com/29603107/124169764-9bce9280-da74-11eb-9171-04c10e089b8a.png)
 
-Quickly I went into twitter and search for "python.dll [@byt3bl33d3r](https://github.com/byt3bl33d3r)", whenever I think on Python for offensive usage, his name (Marcello) is on top of my head. You can read more about him on his [Twitter](https://twitter.com/byt3bl33d3r) or [GitHub](https://github.com/byt3bl33d3r). The search show only one result:
+Quickly I went into Twitter and search for "python.dll [@byt3bl33d3r](https://github.com/byt3bl33d3r)", whenever I think on Python for offensive usage, his name (Marcello) is on top of my head. You can read more about him on his [Twitter](https://twitter.com/byt3bl33d3r) or [GitHub](https://github.com/byt3bl33d3r). The search shows only one result:
 
 ![image](https://user-images.githubusercontent.com/29603107/124169956-d6382f80-da74-11eb-83ad-8561cdf03b23.png)
 [Twitter image link](https://twitter.com/byt3bl33d3r/status/1381128038474084353?s=20)
@@ -76,9 +76,9 @@ What those functions are doing?
 
 Basically we need to call **Py_Initialize()** function before using **PyRun_SimpleString()** and to end our Python script "correctly" we should use **Py_FinalizeEx()**.
 
-3 - **[DInvoke](https://github.com/TheWover/DInvoke)** – Now that we have the address location of those function, we need a way to invoke those function. With **DInvoke** we can dynamically invoke unmanaged API without PInvoke (the method we used for **LoadLibrary()** and **GetProcAddress()**). The use case for DInvoke is that the Python DLL location may change based on Dropbox version.
+3 - **[DInvoke](https://github.com/TheWover/DInvoke)** – Now that we have the address location of those functions, we need a way to invoke those functions. With **DInvoke** we can dynamically invoke unmanaged API without PInvoke (the method we used for **LoadLibrary()** and **GetProcAddress()**). The use case for DInvoke is that the Python DLL location may change based on the Dropbox version.
 
-To use this API we need to (1) define the function we want to use, (2) get the memory address location of those functions (we did it with GetProcAddress()) and (3) initialize/invoke those functions. 
+To use this API we need to (1) define the function we want to use, (2) get the memory address location of those functions (we did it with GetProcAddress()), and (3) initialize/invoke those functions. 
 
 ```
 // (1) - Define the functions
@@ -108,7 +108,7 @@ Py_Finalize Py_Finalize = (Py_Finalize)Marshal.GetDelegateForFunctionPointer(pyF
 Py_Finalize();
 ```
 
-The full code looks like:
+The full code looks like this:
 
 ```
 using System;
@@ -171,13 +171,13 @@ namespace BYOPython
 
 ```
 
-I compiled the code using x86, same as Dropbox python38.dll and execute it, but when it calls **Py_Initialize()** it crash, with the error: **"ModuleNotFoundError: No module named 'encoding'**. 
+I compiled the code using x86, same as Dropbox python38.dll, and execute it, but when it calls **Py_Initialize()** it crashes, with the error: **"ModuleNotFoundError: No module named 'encoding'**. 
 
 ![image](https://user-images.githubusercontent.com/29603107/124183945-e9ec9180-da86-11eb-8d09-8bf1f357c39c.png)
 
 Ok ok, when I'm using Python, I typically solve this issue with **pip install ModuleName**, but how I'm supposed to do this here?
  
-I went into Python website and download the original [Python Windows embeddable package](https://www.python.org/ftp/python/3.9.6/python-3.9.6-embed-amd64.zip) to see if my code works and if the issue it's related to the Dropbox DLL. After unzipping [Python Windows embeddable package](https://www.python.org/ftp/python/3.9.6/python-3.9.6-embed-amd64.zip) on C:\Python38, I changed the DLL PATH to C:\Python38\python38.dll and run my code:
+I went into the Python website and download the original [Python Windows embeddable package](https://www.python.org/ftp/python/3.9.6/python-3.9.6-embed-amd64.zip) to see if my code works and if the issue it's related to the Dropbox DLL. After unzipping [Python Windows embeddable package](https://www.python.org/ftp/python/3.9.6/python-3.9.6-embed-amd64.zip) on C:\Python38, I changed the DLL PATH to C:\Python38\python38.dll and ran my code:
 
 ![image](https://user-images.githubusercontent.com/29603107/124184103-1a343000-da87-11eb-9dab-209640fe649c.png)
 
@@ -185,21 +185,21 @@ Yeah!! It worked, but why it doesn't work with Dropbox python38.dll? I opened [P
 
 ![image](https://user-images.githubusercontent.com/29603107/124184301-5ebfcb80-da87-11eb-8ef9-ca50745a8514.png)
 
-While using the original python38.dll [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) show it access C:\Python38\python38.zip, looks like it assumes there's a .zip file with the same name as the DLL.
+While using the original python38.dll, [Process Monitor](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) show it accesses C:\Python38\python38.zip, looks like it assumes there's a .zip file with the same name as the DLL.
 
 ![image](https://user-images.githubusercontent.com/29603107/124184327-6a12f700-da87-11eb-88f8-6faa54b577fd.png)
 
-According to [Python documentation](https://www.python.org/dev/peps/pep-0273/): "Currently, sys.path is a list of directory names as strings. If this PEP is implemented, an item of sys.path can be a string naming a zip file archive. The zip archive can contain a subdirectory structure to support package imports. The zip archive satisfies imports exactly as a subdirectory would" 
+I was wondering, what's the purpose of this .zip file? While looking around I found this information on [Python documentation website](https://www.python.org/dev/peps/pep-0273/): "Currently, sys.path is a list of directory names as strings. If this PEP is implemented, an item of sys.path can be a string naming a zip file archive. The zip archive can contain a subdirectory structure to support package imports. The zip archive satisfies imports exactly as a subdirectory would" 
 
 ![image](https://user-images.githubusercontent.com/29603107/124184430-8c0c7980-da87-11eb-85b1-e8c1bcf16e34.png)
 
-So, for our purpose Python use this zip to load modules, including the "encodings", the one we got an error before.
+So, for our purpose Python uses this zip to load modules, including the "encodings", the one we got an error before.
 
-Python38.zip doesn’t exist on Dropbox’s directory, but there’s a python-packages.zip which is basically the same, with a different name, as you can see in the following image.  
+Python38.zip doesn’t exist on Dropbox’s directory, but there’s a python-packages.zip which is the same, with a different name, as you can see in the following image.  
 
 ![image](https://user-images.githubusercontent.com/29603107/124184476-9d558600-da87-11eb-9c45-eb04f570bc1d.png)
 
-In order to use that package with our Dropbox python38.dll, I set the program's enviroment variables same as the python38.dll Path and also include python-packages.zip as PATH too. 
+To use that package with our Dropbox python38.dll, I set the program's environment variables the same as the python38.dll Path and include python-packages.zip as PATH too. 
 
 ```
 Environment.SetEnviromentVariable(“PYTHONHOME”, pythonPath);
@@ -210,9 +210,9 @@ After crossing my fingers and pray to God, it worked!!! But while yelling Allelu
 
 ![image](https://user-images.githubusercontent.com/29603107/124184550-beb67200-da87-11eb-8015-82a4cb1ccd64.png)
 
-This is where StackOverflow and [CristiFati](https://stackoverflow.com/users/4788546/cristifati) comes to the rescue. CristiFati indicate that **Py_Initialize()** function checks if **Py_NoSiteFlag** is 0 and then loads the module **site**, so to avoid it he mention you can set **Py_NoSiteFlag** to 1 and the site module won’t be loaded. You can learn more about it [here](https://stackoverflow.com/questions/39539089/what-files-are-required-for-py-initialize-to-run).
+This is where StackOverflow and [CristiFati](https://stackoverflow.com/users/4788546/cristifati) come to the rescue. CristiFati indicates that the **Py_Initialize()** function checks if **Py_NoSiteFlag** is 0 and then loads the module **site**, so to avoid it he mentions you can set **Py_NoSiteFlag** to 1 and the site module won’t be loaded. You can learn more about it [here](https://stackoverflow.com/questions/39539089/what-files-are-required-for-py-initialize-to-run).
 
-To change **Py_NoSiteFlag** value in memory what I did was use **GetProcAddress()** to retreive the memory location and **Marshal.Copy** to set it to 1. 
+To change **Py_NoSiteFlag** value in memory what I did was use **GetProcAddress()** to retrieve the memory location and **Marshal.Copy** to set it to 1. 
 
 ```
 var pyNoSiteFlagAddr = GetProcAddress(pyDll, "Py_NoSiteFlag");
@@ -224,7 +224,7 @@ variable[0] = 1; // 0 for False, 1 for True
 Marshal.Copy(variable, 0, pyNoSiteFlagAddr, 1); // setting Py_NoSiteFlag to 1
 ```
 
-I added this piece of code, compile and wowowo!! I was able to execute Python using Dropbox installation files 😊 
+I added this piece of code, compile it, and wowowo!! I was able to execute Python using Dropbox installation files 😊 
 
 ![image](https://user-images.githubusercontent.com/29603107/124184768-0dfca280-da88-11eb-9a39-6e9cc214019a.png)
 
@@ -232,19 +232,19 @@ I know, I know, you want to see a shell pop up and. There you have!
 
 {% include video id="lZAZBkmIpY4" provider="youtube" %}
 
-## Bring you own Python. 
+## Bring your own Python. 
 
-After playing a little bit with this code, I ended up realizing that I can use any program that does the same as Dropbox, you can go into your **Program Files/Program Files (x86)** directories and search for "python*.dll". I found another software on my computer that also brings it's python38.dll 😊
+After playing a little bit with this code, I ended up realizing that I can use any program that does the same as Dropbox, you can go into your **Program Files/Program Files (x86)** directories and search for "python*.dll". I found another software on my computer that also brings its python38.dll 😊
 
 ![image](https://user-images.githubusercontent.com/29603107/124184872-2f5d8e80-da88-11eb-8d9b-548ac2617a9e.png)
 
-But what if I don’t have any application that brings it's pythonNN.dll? Well you can **B**ring **Y**our **O**wn **P**ython and execute your scripts 😊 
+But what if I don’t have any application that brings its pythonNN.dll? Well you can **B**ring **Y**our **O**wn **P**ython and execute your scripts 😊 
 
-In the following example I’m downloading Python 3.8 from python.org and executing my Python code 😊 
+In the following example, I’m downloading Python 3.8 from python.org and executing my Python code 😊 
 
 {% include video id="rHkBq-ru-yw" provider="youtube" %}
 
-On my [GitHub](https://github.com/juliourena) you will find the source code to abuse Dropbox pythonNN.dll and a reference on how to **B**ring **Y**our **O**wn **P**ython, keep in mind you may need to change the path of your Dropbox instalation to make it work.
+On my [GitHub](https://github.com/juliourena) you will find the source code to abuse Dropbox pythonNN.dll and a reference on how to **B**ring **Y**our **O**wn **P**ython, keep in mind you may need to change the path of your Dropbox installation to make it work.
 
 [BYOPython Github repository](https://github.com/juliourena/BYOPython)
 
