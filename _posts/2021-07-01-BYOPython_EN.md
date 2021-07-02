@@ -252,6 +252,8 @@ If you want a live video me explaining how I discover it and reproducing it, tak
 
 **Note**: I reported this to Dropbox but it was out of scope: "Attacks requiring physical access to a user's device."
 
+Special thanks to tekwizz123 for helping me out reviewing the blog post.
+
 **God bless you!**
 
 **Serving Christ is not a task, but a relationship. God's Friends Jn 15: 15**
